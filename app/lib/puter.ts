@@ -355,6 +355,13 @@ export const usePuterStore = create<PuterStore>((set, get) => {
     };
 
     const img2txt = async (image: string | File | Blob, testMode?: boolean) => {
+    /**
+     * Asynchronously transcribes an image to text using the img2txt API.
+     *
+     * @param {string | File | Blob} image - The image to transcribe. Can be a URL, a `File` object, or a `Blob`.
+     * @param {boolean} [testMode] - Whether to use the test version of the API. Defaults to `false`.
+     * @return {Promise<string>} A promise that resolves to the transcribed text.
+     */
         const puter = getPuter();
         if (!puter) {
             setError("Puter.js not available");
