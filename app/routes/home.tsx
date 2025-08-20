@@ -20,12 +20,12 @@ export default function Home() {
     useEffect(() => {
         if(!auth.isAuthenticated) navigate('/auth?next=/');
     }, [auth.isAuthenticated]);
-    return <main className="bg-[url('/images/bg-main.svg')] bg-cover">
+    return <main className="bg-[url('/images/fondo.jpg')] bg-cover">
         <Navbar/>
         <section className="main-section">
-            <div className="page-heading py-16">
-                <h1>
-                    Ten un seguimiento para buscar oportunidades
+            <div className="page-heading py-8">
+                <h1 className="text-2xl  text-amber-600 ">
+                   HERRAMIENTA PARA MEJORAR CV CON ASISTENCIA ARTIFICIAL
                 </h1>
                 <h2>Revisa tus solicitudes y recibe FeedBack AI</h2>
             </div>

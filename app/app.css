@@ -5,17 +5,17 @@
 @theme {
     --font-sans: "Mona Sans", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --color-dark-200: #475467;
-    --color-light-blue-100: #c1d3f81a;
-    --color-light-blue-200: #a7bff14d;
+    --color-dark-200: #4a4e38; /* Derived from ccd5ae for darker shade */
+    --color-light-blue-100: #e9edc926; /* Adjusted opacity from ccd5ae */
+    --color-light-blue-200: #e9edc94d; /* Adjusted opacity from e9edc9 */
 
-    --color-badge-green: #d5faf1;
-    --color-badge-red: #f9e3e2;
-    --color-badge-yellow: #fceed8;
+    --color-badge-Green: #fefae0;
+    --color-badge-red: #faedcd;
+    --color-badge-yellow: #d4a373;
 
-    --color-badge-green-text: #254d4a;
-    --color-badge-red-text: #752522;
-    --color-badge-yellow-text: #73321b;
+    --color-badge-green-text: #4a4e38;
+    --color-badge-red-text: #6b4e31;
+    --color-badge-yellow-text: #5c4033; 
 }
 
 html,
@@ -27,7 +27,7 @@ main {
     @apply min-h-screen pt-10;
 }
 h1 {
-    @apply text-6xl  text-gradient leading-tight tracking-[-2px] font-semibold;
+    @apply text-5xl  text-gradient leading-tight tracking-[-2px] font-semibold;
 }
 
 h2 {
@@ -38,11 +38,11 @@ label {
     @apply text-dark-200;
 }
 input {
-    @apply w-full p-4 inset-shadow rounded-2xl focus:outline-none bg-white;
+    @apply w-full p-4 inset-shadow  focus:outline-none bg-white;
 }
 
 textarea {
-    @apply w-full p-4 inset-shadow rounded-2xl focus:outline-none bg-white;
+    @apply w-full p-4 inset-shadow  focus:outline-none bg-white;
 }
 
 form {
@@ -51,13 +51,13 @@ form {
 
 @layer components {
     .text-gradient {
-        @apply bg-clip-text text-transparent bg-gradient-to-r from-[#AB8C95] via-[#000000] to-[#8E97C5];
+        @apply bg-clip-text bg-transparent  bg-gradient-to-r from-[#f3cb15] via-[#ff0707] to-[#db990a];
     }
     .gradient-border {
-        @apply bg-gradient-to-b from-light-blue-100 to-light-blue-200 p-4 rounded-2xl;
+        @apply bg-gradient-to-b from-light-blue-100 to-light-blue-200 p-4 ;
     }
     .primary-button {
-        @apply primary-gradient text-white rounded-full px-4 py-2 cursor-pointer w-full;
+        @apply primary-gradient text-white font-bold px-4 py-2 cursor-pointer w-full;
     }
     .resume-nav {
         @apply flex flex-row justify-between items-center p-4 border-b border-gray-200;
@@ -69,7 +69,7 @@ form {
         }
     }
     .back-button {
-        @apply flex flex-row items-center gap-2 border border-gray-200 rounded-lg p-2 shadow-sm;
+        @apply flex flex-row items-center gap-2 border border-gray-200  p-2 shadow-sm;
     }
     .auth-button {
         @apply primary-gradient rounded-full py-4 px-8 cursor-pointer w-[600px] max-md:w-full text-3xl font-semibold text-white;
@@ -97,7 +97,8 @@ form {
     }
 
     .navbar {
-        @apply flex flex-row justify-between items-center bg-white rounded-full p-4 w-full px-10 max-w-[1200px] mx-auto;
+        @apply flex flex-row justify-between items-center bg-white p-4 w-full px-10 max-w-[1200px] mx-auto;
+
     }
 
     .score-badge {
@@ -121,16 +122,16 @@ form {
 }
 
 @utility text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#AB8C95] via-[#000000] to-[#8E97C5];
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#470808] via-[#6f4b04] to-[#6f3d04];
+    text-shadow: 0 0 1px #470808, 0 0 1px #ffb700, 0 0 4px #ff9900;
 }
-
 @utility gradient-hover {
     @apply bg-gradient-to-b from-light-blue-100 to-light-blue-200;
 }
 
 @utility primary-gradient {
-    background: linear-gradient(to bottom, #8e98ff, #606beb);
-    box-shadow: 0px 74px 21px 0px #6678ef00;
+    background: linear-gradient(to bottom, #cc4400, #b30000, #990000);
+    box-shadow: 0px 74px 21px 0px #ff000000;
 }
 
 @utility primary-gradient-hover {
